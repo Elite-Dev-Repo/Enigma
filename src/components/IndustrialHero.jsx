@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
+import StarfieldHero from "./StarfieldHero";
 
 export default function IndustrialHero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden bg-gradient-to-br from-[#000] to-[#000] to-[#001] to-[#111] to-[#000]">
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
       {/* 1px Vertical/Horizontal Lines (The 'Ngrok' Look) */}
+      <StarfieldHero />
       <div className="absolute inset-0 flex justify-center">
         <div className="w-[1px] h-full bg-white/[0.03]" />
         <div className="absolute top-1/2 w-full h-[1px] bg-white/[0.03]" />
@@ -30,11 +32,11 @@ export default function IndustrialHero() {
           agent executing <br /> local life.
         </h1> */}
 
-        <h1 className="items-center text-3xl md:text-[5rem] font-bold text-center text-white tracking-tight mb-4 italic">
+        <h1 className="items-center text-3xl md:text-[5rem] font-bold text-center text-white tracking-tight mb-4">
           The{" "}
           <span className=" rounded bg-[#ff5f1f] px-4 text-center">
             Execution
-          </span>
+          </span>{" "}
           layer for <br /> intent.
         </h1>
 
