@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import StarfieldHero from "./StarfieldHero";
+import StarfieldHero from "./StarFieldHero";
 
 export default function IndustrialHero() {
   return (
