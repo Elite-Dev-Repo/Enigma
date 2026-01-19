@@ -18,24 +18,35 @@ export default function ProtocolSection() {
   ];
 
   return (
-    <section className="py-40 bg-black border-y border-white/5">
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-1px bg-white/5">
-        {specs.map((spec) => (
-          <div
-            key={spec.code}
-            className="bg-black p-12 transition-all hover:bg-white/[0.02] group"
-          >
-            <div className="text-[#FF5F1F] font-mono text-xs mb-8 tracking-widest">
-              [{spec.code}]
+    <section className="py-24 md:py-40 bg-black border-y border-white/5">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
+        {/* On mobile: vertical stack with borders. On md+: 3-column grid with 1px gaps */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-white/5 border-x border-white/5 md:border-none">
+          {specs.map((spec, index) => (
+            <div
+              key={spec.code}
+              className={`
+                bg-black p-8 md:p-12 transition-all hover:bg-white/[0.02] group
+                ${index !== specs.length - 1 ? "border-b border-white/5 md:border-b-0" : ""}
+              `}
+            >
+              {/* Mono Code - Smaller on mobile */}
+              <div className="text-[#FF5F1F] font-mono text-[10px] md:text-xs mb-6 md:mb-8 tracking-[0.2em] md:tracking-widest">
+                [{spec.code}]
+              </div>
+
+              {/* Label - Adjusted for mobile readability */}
+              <h3 className="text-white text-lg md:text-xl font-bold tracking-tighter mb-4 uppercase">
+                {spec.label}
+              </h3>
+
+              {/* Detail - Mono text often needs extra leading (line height) */}
+              <p className="text-white/40 text-[11px] md:text-sm font-mono leading-relaxed md:leading-loose uppercase tracking-tight">
+                {spec.detail}
+              </p>
             </div>
-            <h3 className="text-white text-xl font-bold tracking-tighter mb-4 uppercase">
-              {spec.label}
-            </h3>
-            <p className="text-white/40 text-sm font-mono leading-relaxed uppercase tracking-tight">
-              {spec.detail}
-            </p>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
