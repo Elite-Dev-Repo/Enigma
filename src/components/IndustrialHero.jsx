@@ -13,12 +13,13 @@ export default function IndustrialHero() {
 
       {/* Brand Identity */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 20, scale: 0 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.5 }}
         className="z-10 flex flex-col items-center"
       >
         <div className="mb-8 flex items-center gap-2 px-3 py-1 border border-white/10 rounded-sm bg-white/5">
-          <div className="w-2 h-2 rounded-full bg-[#FF5F1F] shadow-[0_0_8px_#FF5F1F]" />
+          <div className="w-2 h-2 rounded-full animate-pulse bg-[#FF5F1F] shadow-[0_0_8px_#FF5F1F]" />
           <span className="text-[10px] uppercase tracking-[0.3em] font-mono text-white/50">
             in Production...
           </span>
@@ -32,9 +33,9 @@ export default function IndustrialHero() {
           agent executing <br /> local life.
         </h1> */}
 
-        <h1 className="items-center text-3xl md:text-[5rem] font-bold text-center text-white tracking-tight mb-4">
+        <h1 className="items-center text-[3em] md:text-[4.5rem] font-bold text-center text-white tracking-tight mb-4">
           The{" "}
-          <span className=" rounded bg-[#ff5f1f] px-4 text-center">
+          <span className=" rounded bg-white/5 px-4 text-center border border-white/10">
             Execution
           </span>{" "}
           layer for <br /> intent.
@@ -47,7 +48,12 @@ export default function IndustrialHero() {
 
       {/* The Command Console */}
       <div className="z-10 w-full max-w-xl px-4">
-        <div className="relative group bg-white/[0.02] border border-white/10 p-1 rounded-sm focus-within:border-[#FF5F1F]/50 transition-colors">
+        <motion.div
+          initial={{ x: -200 }}
+          animate={{ x: 0 }}
+          transition={{ duration: 1 }}
+          className="relative group bg-white/[0.02] border border-white/20 p-1 rounded-sm focus-within:border-[#FF5F1F]/50 transition-colors"
+        >
           <div className="flex items-center">
             <span className="pl-4 pr-3 text-[#FF5F1F] font-mono leading-none">
               →
@@ -55,13 +61,13 @@ export default function IndustrialHero() {
             <input
               type="text"
               placeholder="ENIGMA_EXECUTE: find_best_flight_to_lagos"
-              className="bg-transparent border-none outline-none py-4 text-white font-mono text-sm w-full placeholder:text-white/10 uppercase tracking-widest"
+              className="bg-transparent border-none outline-none py-4 text-white font-mono text-sm w-full placeholder:text-white/20 uppercase tracking-widest"
             />
           </div>
-        </div>
+        </motion.div>
 
         {/* Helper Footer under Input */}
-        <div className="mt-3 flex justify-between px-1 text-[9px] font-mono text-white/40 uppercase">
+        <div className="mt-3 flex justify-between px-1 text-[10px] font-mono text-white/40 uppercase">
           <span>Target: Global_Local_APIs</span>
           <span>Auth: Secure_Vault_7</span>
         </div>

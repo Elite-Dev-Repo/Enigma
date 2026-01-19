@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function SecurityVault() {
   return (
     <section className="py-40 bg-[#050505]">
@@ -12,7 +14,12 @@ export default function SecurityVault() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="p-8 border border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+          <motion.div
+            initial={{ x: -20 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="p-8 border border-white/5 bg-gradient-to-br from-white/5 to-transparent"
+          >
             <h4 className="text-white font-bold mb-4 uppercase tracking-tight">
               Isolated Execution
             </h4>
@@ -20,8 +27,13 @@ export default function SecurityVault() {
               Agent tasks are processed in ephemeral secure enclaves. Once the
               task is executed, the data footprint is purged.
             </p>
-          </div>
-          <div className="p-8 border border-white/5 bg-gradient-to-br from-white/5 to-transparent">
+          </motion.div>
+          <motion.div
+            initial={{ x: 20 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="p-8 border border-white/5 bg-gradient-to-br from-white/5 to-transparent"
+          >
             <h4 className="text-white font-bold mb-4 uppercase tracking-tight">
               Zero Knowledge Intent
             </h4>
@@ -29,7 +41,7 @@ export default function SecurityVault() {
               Enigma manages your preferences locally. Your "Intent Profile" is
               never sold, indexed, or shared with advertisers.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

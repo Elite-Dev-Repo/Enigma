@@ -4,13 +4,13 @@ import ProtocolSection from "./components/ProtocolSection";
 import ExecutionStream from "./components/ExecutionStream";
 import SecurityVault from "./components/SecurityVault";
 import GenesisCTA from "./components/GenesisCTA";
-import elitelogo from "../public/elitelogo.png";
+import elitelogo from "../src/assets/elitelogo.png";
 
 export default function App() {
   return (
     <div className="bg-black min-h-screen selection:bg-[#FF5F1F] selection:text-white">
       {/* Fixed Navigation Overlay */}
-      <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-10 py-6 mix-blend-difference backdrop-blur-3xl">
+      <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-10 py-6 mix-blend-difference backdrop-blur-[5px]">
         <div className="w-[50px] h-[50px]">
           <img src={elitelogo} alt="" className="w-full" />
         </div>

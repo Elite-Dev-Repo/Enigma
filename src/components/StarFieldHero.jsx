@@ -12,7 +12,7 @@ const StarfieldHero = () => {
     // --- Configuration ---
     const STAR_COUNT = 100; // Number of grains
     const CONNECTION_DIST = 120; // Distance for constellation lines
-    const FALL_SPEED = 0.5; // Base falling speed
+    const FALL_SPEED = 0.2; // Base falling speed
 
     const resizeCanvas = () => {
       const parent = canvas.parentElement;
@@ -26,8 +26,8 @@ const StarfieldHero = () => {
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
         size: Math.random() * 1.5 + 2, // Tiny grains
-        speed: Math.random() * 1.5 + FALL_SPEED,
-        opacity: Math.random() * 0.5 + 0.5,
+        speed: Math.random() * 0.2 + FALL_SPEED,
+        opacity: Math.random() * 0.1 + 0.4,
       }));
     };
 
@@ -47,24 +47,24 @@ const StarfieldHero = () => {
         ctx.fillRect(star.x, star.y, star.size, star.size); // Square grains look more industrial
 
         // 3. Constellation Lines
-        for (let j = i + 1; j < stars.length; j++) {
-          const other = stars[j];
-          const dx = star.x - other.x;
-          const dy = star.y - other.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+        // for (let j = i + 1; j < stars.length; j++) {
+        //   const other = stars[j];
+        //   const dx = star.x - other.x;
+        //   const dy = star.y - other.y;
+        //   const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < CONNECTION_DIST) {
-            ctx.beginPath();
-            // Very faint lines to match your 0.03 opacity grid
-            ctx.strokeStyle = `rgba(255,95,31, ${
-              (1 - dist / CONNECTION_DIST) * 0.2
-            })`;
-            ctx.lineWidth = 0.5;
-            ctx.moveTo(star.x, star.y);
-            ctx.lineTo(other.x, other.y);
-            ctx.stroke();
-          }
-        }
+        //   if (dist < CONNECTION_DIST) {
+        //     ctx.beginPath();
+        //     // Very faint lines to match your 0.03 opacity grid
+        //     ctx.strokeStyle = `rgba(255,95,31, ${
+        //       (1 - dist / CONNECTION_DIST) * 0.3
+        //     })`;
+        //     ctx.lineWidth = 0.5;
+        //     ctx.moveTo(star.x, star.y);
+        //     ctx.lineTo(other.x, other.y);
+        //     ctx.stroke();
+        //   }
+        // }
       });
 
       animationFrameId = requestAnimationFrame(draw);
