@@ -19,7 +19,7 @@ export default function IndustrialHero() {
         transition={{ duration: 0.8 }}
         className="z-10 flex flex-col items-center w-full max-w-4xl"
       >
-        <div className="mb-6 md:mb-8 flex items-center gap-2 px-3 py-1 border border-white/10 rounded-sm bg-white/5">
+        <div className="mb-6 md:mb-8 flex items-center gap-2 px-3 py-1 border border-white/10 rounded-sm bg-white/5 backdrop-blur-[5px]">
           <div className="w-2 h-2 rounded-full animate-pulse bg-[#FF5F1F] shadow-[0_0_8px_#FF5F1F]" />
           <span className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] md:tracking-[0.3em] font-mono text-white/50">
             in Production...
@@ -29,7 +29,7 @@ export default function IndustrialHero() {
         {/* Fluid Typography: Text scales from 2.5rem to 4.5rem based on screen size */}
         <h1 className="text-[2.2rem] xs:text-[2.8rem] sm:text-[3.5rem] md:text-[4.5rem] font-bold text-center text-white tracking-tight mb-4 leading-[1.1]">
           The{" "}
-          <span className="inline-block rounded bg-white/5 px-2 md:px-4 text-center border border-white/10">
+          <span className="inline-block rounded bg-white/5 px-2 md:px-4 text-center border border-white/10 backdrop-blur-[5px]">
             Execution
           </span>{" "}
           layer for <br className="hidden sm:block" /> intent.
