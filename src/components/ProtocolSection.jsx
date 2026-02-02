@@ -18,15 +18,15 @@ export default function ProtocolSection() {
   ];
 
   return (
-    <section className="py-24 md:py-40 bg-black border-y border-white/5">
+    <section className="py-24 md:py-40 border-y border-white/5">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
         {/* On mobile: vertical stack with borders. On md+: 3-column grid with 1px gaps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-white/5 border-x border-white/5 md:border-none">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 border-x border-white/5 md:border-none">
           {specs.map((spec, index) => (
             <div
               key={spec.code}
-              className={`
-                bg-black p-8 md:p-12 transition-all hover:bg-white/[0.02] group
+              className={` *: border border-[var(--border-light)] 
+                p-8 md:p-12 transition-all hover:bg-white/[0.02] group 
                 ${index !== specs.length - 1 ? "border-b border-white/5 md:border-b-0" : ""}
               `}
             >

@@ -38,7 +38,7 @@ const protocols = [
 
 export default function Integrations() {
   return (
-    <section className="py-40 bg-black px-6 border-t border-white/5">
+    <section className="py-40  px-6 border-t border-white/5">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
@@ -58,7 +58,7 @@ export default function Integrations() {
 
         {/* The Integration Grid */}
         <div className="grid md:grid-cols-2 gap-0 border-l border-t border-white/5">
-          {protocols.map((p, i) => (
+          {protocols.map((p) => (
             <motion.div
               key={p.id}
               whileHover={{ backgroundColor: "rgba(255, 255, 255, 0.02)" }}

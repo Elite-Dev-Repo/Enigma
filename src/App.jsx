@@ -4,20 +4,16 @@ import ProtocolSection from "./components/ProtocolSection";
 import ExecutionStream from "./components/ExecutionStream";
 import SecurityVault from "./components/SecurityVault";
 import GenesisCTA from "./components/GenesisCTA";
-import elitelogo from "../src/assets/elitelogo.png";
+import enigma from "../src/assets/enigma.png";
 import Integrations from "./components/Integrations";
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen selection:bg-[#FF5F1F] selection:text-white scroll-smooth">
+    <div className="min-h-screen selection:bg-[#FF5F1F] selection:text-white scroll-smooth">
       {/* Fixed Navigation Overlay */}
-      <nav className="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 md:py-6 mix-blend-difference backdrop-blur-[5px]">
-        <div className="w-[40px] h-[40px] md:w-[50px] md:h-[50px]">
-          <img
-            src={elitelogo}
-            alt="Elite Logo"
-            className="w-full h-full object-contain"
-          />
+      <nav className="fixed top-0 h-[80px] w-full z-50 flex justify-between items-center px-6 md:px-10 py-4 md:py-6 mix-blend-difference backdrop-blur-[5px]">
+        <div className="flex items-center gap-4">
+          <img src={enigma} alt="logo" className="w-[120px] md:w-[160px]" />
         </div>
 
         {/* Navigation - Hidden text on very small screens or reduced tracking */}
@@ -26,7 +22,7 @@ export default function App() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-[10px] md:text-[13px] font-mono uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/70 hover:text-[#FF5F1F] transition-colors"
+              className="text-[10px] md:text-[11px] uppercase tracking-[0.2em] md:tracking-[0.3em] text-white/70 hover:text-[#FF5F1F] transition-colors"
             >
               {item}
             </a>

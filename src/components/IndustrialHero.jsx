@@ -3,7 +3,7 @@ import StarfieldHero from "./StarFieldHero";
 
 export default function IndustrialHero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden px-4 sm:px-6">
+    <section className=" relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden px-4 sm:px-6">
       <StarfieldHero />
 
       {/* 1px Vertical/Horizontal Lines - Adjusted opacity for mobile */}

@@ -1,10 +1,8 @@
-import { motion } from "framer-motion";
-
 export default function GenesisCTA() {
   return (
-    <section className="py-32 md:py-60 flex flex-col items-center text-center px-6 bg-black relative overflow-hidden">
+    <section className="py-32 md:py-60 flex flex-col items-center text-center px-6  relative overflow-hidden">
       {/* Decorative background element for mobile depth */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-[#FF5F1F]/5 blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[300px] bg-[#fff]/5 blur-[120px] pointer-events-none" />
 
       <div className="w-12 md:w-20 h-[1px] bg-[#FF5F1F] mb-8 md:mb-12" />
 

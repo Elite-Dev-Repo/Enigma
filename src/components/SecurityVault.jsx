@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function SecurityVault() {
   return (
-    <section className="py-24 md:py-40 bg-[#050505] overflow-hidden">
+    <section className="py-24 md:py-40 overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header: Fluid font size and adjusted spacing */}
         <div className="border-l-2 border-[#FF5F1F] pl-6 md:pl-8 mb-12 md:mb-20">

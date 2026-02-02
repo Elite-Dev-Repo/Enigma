@@ -7,12 +7,8 @@
 /* Update your index.css */
 @layer base {
   body {
-    @apply bg-black text-[#A0A0A0] antialiased selection:bg-[#FF5F1F] selection:text-white;
-    background-image: radial-gradient(
-      circle at 50% 0%,
-      #ff5f1f10 0%,
-      transparent 50%
-    );
+    background-color: rgb(5, 5, 5);
+    @apply text-[#A0A0A0] antialiased selection:bg-[#FF5F1F] selection:text-white;
   }
 }
 
@@ -28,4 +24,8 @@
   height: 8px;
   width: 8px;
   background-color: #ff5f1f;
+}
+
+:root {
+  --border-light: #e5e5e517;
 }
